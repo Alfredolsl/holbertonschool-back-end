@@ -7,7 +7,7 @@ import csv
 if __name__ == "__main__":
     link = "https://jsonplaceholder.typicode.com"
 
-    employee_id = argv[1]
+    employee_id = int(argv[1])
     employee = requests.get(f"{link}/users/{employee_id}").json()
     employee_name = employee.get("name")
 
