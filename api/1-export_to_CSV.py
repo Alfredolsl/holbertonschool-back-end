@@ -16,7 +16,8 @@ if __name__ == "__main__":
     file_name = f"{employee_id}.csv"
     all_tasks = []
     for todo in todo_list:
-        task = [todo["userId"], employee_name, todo["completed"], todo["title"]]
+        task = [todo.get("userId"), employee_name,
+                todo.get("completed"), todo.get("title")]
         all_tasks.append(task)
 
     with open(file_name, mode="w", encoding="utf-8") as csvfile:
