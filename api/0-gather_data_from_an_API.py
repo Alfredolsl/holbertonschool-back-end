@@ -14,4 +14,4 @@ tasks_done = [task for task in todo_list if task["completed"] is True]
 print("Employee {} is done with tasks ({}/{}):".format(employee_name, len(tasks_done), total_tasks))
 
 for task in tasks_done:
-    print("\t{}".format(task["title"]))
+    print("\t", task["title"], sep="")
