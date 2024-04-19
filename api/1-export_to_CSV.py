@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Returns info about an employee's TODO list using REST API."""
+"""Export employee's data into a csv file"""
 import requests
 from sys import argv
 import csv
