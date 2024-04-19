@@ -13,9 +13,10 @@ if __name__ == "__main__":
 
     todo_list = requests.get(f"{link}/todos?userId={employee_id}").json()
 
-    tasks = {employee_id: [{"task":todo.get("title"),
-             "completed": todo.get("completed"),
-             "username": employee_name} for todo in todo_list]}
+    tasks = {employee_id: [{"task": todo.get("title"),
+                            "completed": todo.get("completed"),
+                            "username": employee_name}
+             for todo in todo_list]}
 
     file_name = f"{employee_id}.json"
     with open(file_name, mode="w", encoding="utf-8") as f:
