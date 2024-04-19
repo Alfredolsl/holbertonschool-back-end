@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     employee_id = int(argv[1])
     employee = requests.get(f"{link}/users/{employee_id}").json()
-    employee_name = employee.get("name")
+    employee_name = employee.get("username")
 
     todo_list = requests.get(f"{link}/todos?userId={employee_id}").json()
 
