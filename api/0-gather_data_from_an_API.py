@@ -7,8 +7,8 @@ if __name__ == "__main__":
     link = "https://jsonplaceholder.typicode.com"
 
     employee_id = argv[1]
-    employee = requests.get(f"{link}/users?id={employee_id}").json()
-    employee_name = employee[0]["name"]
+    employee = requests.get(f"{link}/users/{employee_id}").json()
+    employee_name = employee["name"]
 
     todo_list = requests.get(f"{link}/todos?userId={employee_id}").json()
     total_tasks = len(todo_list)
