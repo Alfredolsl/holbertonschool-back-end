@@ -18,4 +18,4 @@ print("Employee {} is done with tasks ({}/{}):".format(employee_name,
                                                        total_tasks))
 
 for task in tasks_done:
-    print("\t", task["title"], sep="")
+    print("\t", task["title"])
